@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        timeLabel.layer.cornerRadius = 20.0
+        playButton.layer.cornerRadius = 20.0
     }
 
     @IBAction func didTapPlay(_ sender: Any) {
