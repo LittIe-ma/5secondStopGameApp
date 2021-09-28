@@ -48,11 +48,17 @@ class ViewController: UIViewController {
             buttonNameType = .reset
             playButton.setTitle("reset", for: .normal)
             timer?.invalidate()
+            if timeLabel.text == "00:05:00" {
+                resultLabel.text = "ナイスピッタリ！"
+            }else {
+                resultLabel.text = "惜しい！残念！"
+            }
         case .reset:
             buttonNameType = .start
             playButton.setTitle("start", for: .normal)
             timeLabel.text = "00:00:00"
             elapsedTime = 0.0
+            resultLabel.text = ""
         default:
             break
         }
